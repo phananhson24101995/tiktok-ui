@@ -8,3 +8,5 @@
     - vào document react-app-rewired để cấu hình:
         + Tạo file config-overrides.js trong thư mục root
 
+4. Cài đặt babel plugin module resolver: babel-plugin-module-resolver -> Tạo đường dẫn gọn
+
