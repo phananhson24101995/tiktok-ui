@@ -1,0 +1,10 @@
+1. Tạo dự án reactjs:
+    - npx create-react-app ten_du_an
+
+2. Vào dự án:
+    - Tạo 1 file .env.local: cài đặt các biến môi trường mà công cụ create-app sẽ chấp nhận các biến tại file này và có các quy ước nhất định
+3. Cài đặt customize-cra để tuỳ chỉnh cấu hình Webpack
+    - npm add customize-cra react-app-rewired -D (-D cài đặt trên môi trường dev)
+    - vào document react-app-rewired để cấu hình:
+        + Tạo file config-overrides.js trong thư mục root
+
