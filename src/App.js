@@ -1,7 +1,9 @@
+import { Fragment } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "~/pages/Home";
 import Following from "~/pages/Following";
 import { publicRoutes } from "~/routes";
+import { DefaultLayout } from "~/components/Layout";
 
 function App() {
   return (
@@ -11,7 +13,14 @@ function App() {
           {
             publicRoutes.map((route, idx) => {
               const Page = route.component;
-              return <Route key={idx} path={route.path} element={<Page />} />
+              const Layout = route.layout === null ? Fragment : route.layout || DefaultLayout;
+              return <Route key={idx}
+                path={route.path}
+                element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                } />
             })
           }
         </Routes>
